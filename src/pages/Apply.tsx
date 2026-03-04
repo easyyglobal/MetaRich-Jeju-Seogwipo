@@ -16,6 +16,13 @@ export default function Apply() {
     agree: false
   });
 
+  // 신청 성공 시 화면 상단으로 스크롤
+  React.useEffect(() => {
+    if (success) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [success]);
+
   const recentApplications = [
     { name: '김*수', region: '서귀포시 대정읍', time: '3분 전', type: '보장분석' },
     { name: '이*영', region: '서귀포시 남원읍', time: '12분 전', type: '재무설계' },
