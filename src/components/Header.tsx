@@ -34,12 +34,12 @@ export default function Header() {
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-      scrolled ? "py-3" : "pt-8 pb-16"
+      scrolled ? "py-3" : "py-6"
     )}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={cn(
-          "flex justify-between items-center h-16 px-6 rounded-2xl transition-all duration-500",
-          scrolled ? "glass shadow-lg" : "bg-transparent"
+          "flex justify-between items-center px-6 rounded-2xl transition-all duration-500",
+          scrolled ? "h-16 glass shadow-lg" : "h-24 bg-transparent"
         )}>
           <Link to="/" className="flex items-center space-x-2 group">
             <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center shadow-lg group-hover:rotate-12 transition-transform">
