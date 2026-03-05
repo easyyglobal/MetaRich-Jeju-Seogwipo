@@ -3,9 +3,9 @@ import { Lock, Eye, ShieldAlert, CheckCircle2 } from 'lucide-react';
 
 export default function Privacy() {
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero */}
-      <section className="bg-slate-900 py-24 text-white relative overflow-hidden">
+      <section className="bg-slate-900 pt-32 pb-24 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

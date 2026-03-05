@@ -3,9 +3,9 @@ import { ShieldCheck, FileText, CheckCircle2 } from 'lucide-react';
 
 export default function Regulations() {
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero */}
-      <section className="bg-slate-900 py-24 text-white relative overflow-hidden">
+      <section className="bg-slate-900 pt-32 pb-24 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
             <path d="M0 100 C 20 0 50 0 100 100" stroke="white" fill="transparent" strokeWidth="0.5" />
