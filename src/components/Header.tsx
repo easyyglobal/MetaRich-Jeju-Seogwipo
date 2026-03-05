@@ -34,12 +34,12 @@ export default function Header() {
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-      scrolled ? "py-3" : "py-6"
+      scrolled ? "py-3" : "pt-8 pb-16"
     )}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={cn(
-          "flex justify-between items-center px-6 rounded-2xl transition-all duration-500",
-          scrolled ? "h-16 glass shadow-lg" : "h-24 bg-transparent"
+          "flex justify-between items-center h-16 px-6 rounded-2xl transition-all duration-500",
+          scrolled ? "glass shadow-lg" : "bg-transparent"
         )}>
           <Link to="/" className="flex items-center space-x-2 group">
             <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center shadow-lg group-hover:rotate-12 transition-transform">
@@ -58,16 +58,17 @@ export default function Header() {
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  "text-sm font-semibold transition-all hover:text-primary relative group",
+                  "text-sm font-semibold transition-all relative group",
                   location.pathname === item.path 
-                    ? "text-primary" 
-                    : (scrolled || !isDarkHeroPage ? "text-slate-600" : "text-white")
+                    ? ((scrolled || !isDarkHeroPage) ? "text-primary" : "text-white") 
+                    : ((scrolled || !isDarkHeroPage) ? "text-slate-600 hover:text-primary" : "text-white")
                 )}
               >
                 {item.name}
                 <span className={cn(
-                  "absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300",
-                  location.pathname === item.path ? "w-full" : "w-0 group-hover:w-full"
+                  "absolute -bottom-1 left-0 h-0.5 transition-all duration-300",
+                  location.pathname === item.path ? "w-full" : "w-0 group-hover:w-full",
+                  (scrolled || !isDarkHeroPage) ? "bg-primary" : "bg-secondary"
                 )} />
               </Link>
             ))}
@@ -79,8 +80,8 @@ export default function Header() {
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
               <button className={cn(
-                "flex items-center gap-1 text-sm font-semibold transition-colors hover:text-primary",
-                (scrolled || !isDarkHeroPage) ? "text-slate-600" : "text-white"
+                "flex items-center gap-1 text-sm font-semibold transition-colors",
+                (scrolled || !isDarkHeroPage) ? "text-slate-600 hover:text-primary" : "text-white"
               )}>
                 지점 특별 사업
                 <ChevronDown size={14} className={cn("transition-transform duration-300", isDropdownOpen && "rotate-180")} />
@@ -121,7 +122,7 @@ export default function Header() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={cn("transition-colors", scrolled ? "text-slate-600" : "text-white")}
+              className={cn("transition-colors", (scrolled || !isDarkHeroPage) ? "text-slate-600" : "text-white")}
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
