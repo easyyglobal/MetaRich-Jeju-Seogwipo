@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 export default function FinancialEducation() {
   return (
-    <div className="py-32">
-      <section className="relative py-24 overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-800 text-white">
+    <div>
+      <section className="relative  pt-[180px] pb-[100px] overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
