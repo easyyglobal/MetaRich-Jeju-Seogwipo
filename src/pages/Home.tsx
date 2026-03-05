@@ -7,19 +7,19 @@ const testimonials = [
   {
     name: "김*희 고객님",
     age: "40대 주부",
-    content: "매달 나가는 보험료가 부담스러워 상담을 신청했는데, 중복된 보장을 정리해주셔서 월 15만원이나 절약했어요. 설명도 너무 친절하셔서 믿음이 갑니다.",
+    content: "매달 나가는 보험료가 부담스러워 상담을 신청했는데, 중복된 보장을 정리해주셔서 너무 만족스럽네요. 설명도 너무 친절하셔서 믿음이 갑니다.",
     rating: 5
   },
   {
     name: "이*준 고객님",
     age: "30대 직장인",
-    content: "유튜브 보고 혼자 가입했던 보험들이 엉망이었다는 걸 알게 됐네요. 제 상황에 딱 맞는 암 보험으로 리모델링해주셔서 이제야 안심이 됩니다.",
+    content: "유튜브 보고 혼자 가입했던 보험들이 제게는 맞지 않았단 걸 알게 됐네요. 제 상황에 딱 맞는 암 보험으로 준비할 수 있게 도움주셔서 이제야 안심이 됩니다.",
     rating: 5
   },
   {
     name: "박*수 고객님",
     age: "50대 자영업자",
-    content: "서귀포 지역이라 직접 찾아오셔서 상담해주시는 게 너무 좋았습니다. 복잡한 보험금 청구도 대신 도와주셔서 정말 큰 도움이 됐어요.",
+    content: "서귀포 지역이라 직접 찾아오셔서 상담해주시는 게 너무 좋았습니다. 작은 부분들 까지도 세심히 말씀해주셔서 정말 큰 도움이 됐어요.",
     rating: 5
   }
 ];
@@ -28,27 +28,65 @@ export default function Home() {
   return (
     <div className="bg-white pt-40">
       {/* Hero Section */}
-      <section class="relative h-screen flex items-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-          <img alt="Jeju Landscape" class="w-full h-full object-cover scale-105" referrerpolicy="no-referrer" src="/images/hero-jeju.jpg">
-          <div class="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-white">
-          </div>
-          </div>
-          <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div class="max-w-3xl" style="opacity: 1; transform: none;">
-              <div class="inline-flex items-center gap-2 px-4 py-2 glass rounded-full mb-8 border-white/30" style="opacity: 1; transform: none;">
-              <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-              <span class="text-slate-900 text-xs font-bold tracking-widest uppercase">Metarich Jeju Seogwipo</span>
-              </div>
-              <h1 class="text-5xl md:text-7xl font-bold text-white leading-[1.1] mb-8 tracking-tight drop-shadow-sm">
-                보험을 넘어 <br>
-                <span class="text-gradient">당신의 인생을</span> <br>
-                설계합니다.</h1>
-                
-                <p class="text-xl text-slate-200 mb-12 leading-relaxed max-w-xl drop-shadow-sm">단순한 상품 판매가 아닌, 데이터 기반의 정밀 분석으로 고객님의 생애 주기
-                  에 최적화된 가치를 제안합니다.</p>
-                  <div class="flex flex-col sm:flex-row gap-5">
-                    <a class="gradient-primary text-white px-10 py-5 rounded-2xl text-lg font-bold hover:shadow-[0_20px_40px_-10px_rgba(0,96,174,0.4)] hover:-translate-y-1 transition-all flex items-center justify-center gap-2 group" href="/apply" data-discover="true">정밀 보장분석 신청하기<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right group-hover:translate-x-1 transition-transform" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a><a class="glass text-slate-900 px-10 py-5 rounded-2xl text-lg font-bold hover:bg-white transition-all flex items-center justify-center border-slate-200" href="/about" data-discover="true">지점 전문성 확인하기</a></div></div></div></section>
+      <section className="relative h-[calc(100vh-14rem)] flex items-center overflow-hidden rounded-[3rem] mx-4 md:mx-8 shadow-2xl">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/images/hero-jeju.jpg"
+            alt="Jeju Landscape"
+            className="w-full h-full object-cover scale-105"
+            referrerPolicy="no-referrer"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-white"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="max-w-3xl"
+          >
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5 }}
+              className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full mb-8 border-white/30"
+            >
+              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+              <span className="text-slate-900 text-xs font-bold tracking-widest uppercase">
+                Metarich Jeju Seogwipo
+              </span>
+            </motion.div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] mb-8 tracking-tight drop-shadow-sm">
+              보험을 넘어 <br />
+              <span className="text-gradient">당신의 인생을</span> <br />
+              설계합니다.
+            </h1>
+            
+            <p className="text-xl text-slate-200 mb-12 leading-relaxed max-w-xl drop-shadow-sm">
+              단순한 상품 판매가 아닌, 데이터 기반의 정밀 진단으로 
+              고객님의 생애 주기에 최적화된 가치를 제안합니다.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-5">
+              <Link
+                to="/apply"
+                className="gradient-primary text-white px-10 py-5 rounded-2xl text-lg font-bold hover:shadow-[0_20px_40px_-10px_rgba(0,96,174,0.4)] hover:-translate-y-1 transition-all flex items-center justify-center gap-2 group"
+              >
+                정밀 보장분석 신청하기
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/about"
+                className="glass text-slate-900 px-10 py-5 rounded-2xl text-lg font-bold hover:bg-white transition-all flex items-center justify-center border-slate-200"
+              >
+                지점 전문성 확인하기
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Value Proposition */}
       <section className="py-32 relative overflow-hidden">
