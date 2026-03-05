@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 export default function CorporateInsurance() {
   return (
-    <div >
-      <section className="relative  pt-[180px] pb-[100px] overflow-hidden bg-slate-900 text-white">
+    <div>
+      <section className="relative py-24 overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0 opacity-20">
           <img src="/images/corporate-hero.jpg" alt="Building" className="w-full h-full object-cover" />
         </div>

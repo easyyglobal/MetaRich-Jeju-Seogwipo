@@ -29,19 +29,7 @@ export default function Header() {
   const [isProtectionOpen, setIsProtectionOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
   const location = useLocation();
-
-  // 어두운 배경을 가진 페이지 경로 리스트 (상단에서 흰색 글자 적용)
-  const darkHeroPages = [
-    '/', 
-    '/about', 
-    '/projects/corporate', 
-    '/projects/education', 
-    '/projects/jeju',
-    '/protection/regulations',
-    '/protection/privacy',
-    '/protection/certificate'
-  ];
-  
+  const darkHeroPages = ['/', '/about', '/projects/corporate', '/projects/education', '/projects/jeju', '/protection/regulations', '/protection/privacy', '/protection/certificate'];
   const isDarkHeroPage = darkHeroPages.includes(location.pathname);
 
   React.useEffect(() => {
@@ -49,11 +37,6 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  // 공통 텍스트 색상 결정 로직
-  const getTextColor = () => (scrolled || !isDarkHeroPage) ? "text-slate-900" : "text-white";
-  const getSubTextColor = () => (scrolled || !isDarkHeroPage) ? "text-slate-500" : "text-slate-200";
-  const getUnderlineColor = () => (scrolled || !isDarkHeroPage) ? "bg-primary" : "bg-secondary";
 
   return (
     <header className={cn(
@@ -70,8 +53,8 @@ export default function Header() {
               <span className="text-white font-bold text-xl">M</span>
             </div>
             <div className="flex flex-col">
-              <span className={cn("font-bold text-lg leading-tight transition-colors", getTextColor())}>메타리치</span>
-              <span className={cn("text-xs font-medium transition-colors", getSubTextColor())}>제주 서귀포지점</span>
+              <span className={cn("font-bold text-lg leading-tight transition-colors", (scrolled || !isDarkHeroPage) ? "text-slate-900" : "text-white")}>메타리치</span>
+              <span className={cn("text-xs font-medium transition-colors", (scrolled || !isDarkHeroPage) ? "text-slate-500" : "text-slate-200")}>제주 서귀포지점</span>
             </div>
           </Link>
 
@@ -84,15 +67,15 @@ export default function Header() {
                 className={cn(
                   "text-sm font-semibold transition-all relative group",
                   location.pathname === item.path 
-                    ? (scrolled || !isDarkHeroPage ? "text-primary" : "text-white") 
-                    : getTextColor() + " hover:text-primary"
+                    ? ((scrolled || !isDarkHeroPage) ? "text-primary" : "text-white") 
+                    : ((scrolled || !isDarkHeroPage) ? "text-slate-600 hover:text-primary" : "text-white")
                 )}
               >
                 {item.name}
                 <span className={cn(
                   "absolute -bottom-1 left-0 h-0.5 transition-all duration-300",
                   location.pathname === item.path ? "w-full" : "w-0 group-hover:w-full",
-                  getUnderlineColor()
+                  (scrolled || !isDarkHeroPage) ? "bg-primary" : "bg-secondary"
                 )} />
               </Link>
             ))}
@@ -105,7 +88,7 @@ export default function Header() {
             >
               <button className={cn(
                 "flex items-center gap-1 text-sm font-semibold transition-colors",
-                getTextColor(), "hover:text-primary"
+                (scrolled || !isDarkHeroPage) ? "text-slate-600 hover:text-primary" : "text-white"
               )}>
                 지점 특별 사업
                 <ChevronDown size={14} className={cn("transition-transform duration-300", isDropdownOpen && "rotate-180")} />
@@ -141,7 +124,7 @@ export default function Header() {
             >
               <button className={cn(
                 "flex items-center gap-1 text-sm font-semibold transition-colors",
-                getTextColor(), "hover:text-primary"
+                (scrolled || !isDarkHeroPage) ? "text-slate-600 hover:text-primary" : "text-white"
               )}>
                 금융소비자보호
                 <ChevronDown size={14} className={cn("transition-transform duration-300", isProtectionOpen && "rotate-180")} />
@@ -174,7 +157,7 @@ export default function Header() {
               className="gradient-primary text-white px-6 py-2.5 rounded-xl text-sm font-bold hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-2"
             >
               <Phone size={16} />
-              정밀 분석 신청
+              정밀 진단 신청
             </Link>
           </nav>
 
@@ -182,7 +165,7 @@ export default function Header() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={cn("transition-colors", getTextColor())}
+              className={cn("transition-colors", (scrolled || !isDarkHeroPage) ? "text-slate-600" : "text-white")}
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -212,7 +195,7 @@ export default function Header() {
                 </button>
               </div>
 
-              <div className="flex flex-col space-y-6 overflow-y-auto pb-20">
+              <div className="flex flex-col space-y-6">
                 {navItems.map((item) => (
                   <Link
                     key={item.path}
@@ -260,7 +243,7 @@ export default function Header() {
                 </div>
               </div>
 
-              <div className="mt-auto pt-6 bg-white">
+              <div className="mt-auto">
                 <Link
                   to="/apply"
                   onClick={() => setIsOpen(false)}

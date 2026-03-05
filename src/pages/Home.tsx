@@ -7,28 +7,28 @@ const testimonials = [
   {
     name: "김*희 고객님",
     age: "40대 주부",
-    content: "매달 나가는 보험료가 부담스러워 상담을 신청했는데, 중복된 보장을 정리해주셔서 너무 만족스럽네요. 설명도 너무 친절하셔서 믿음이 갑니다.",
+    content: "매달 나가는 보험료가 부담스러워 상담을 신청했는데, 중복된 보장을 정리해주셔서 월 15만원이나 절약했어요. 설명도 너무 친절하셔서 믿음이 갑니다.",
     rating: 5
   },
   {
     name: "이*준 고객님",
     age: "30대 직장인",
-    content: "유튜브 보고 혼자 가입했던 보험들이 제게는 맞지 않았단 걸 알게 됐네요. 제 상황에 딱 맞는 암 보험으로 준비할 수 있게 도움주셔서 이제야 안심이 됩니다.",
+    content: "유튜브 보고 혼자 가입했던 보험들이 엉망이었다는 걸 알게 됐네요. 제 상황에 딱 맞는 암 보험으로 리모델링해주셔서 이제야 안심이 됩니다.",
     rating: 5
   },
   {
     name: "박*수 고객님",
     age: "50대 자영업자",
-    content: "서귀포 지역이라 직접 찾아오셔서 상담해주시는 게 너무 좋았습니다. 작은 부분들 까지도 세심히 말씀해주셔서 정말 큰 도움이 됐어요.",
+    content: "서귀포 지역이라 직접 찾아오셔서 상담해주시는 게 너무 좋았습니다. 복잡한 보험금 청구도 대신 도와주셔서 정말 큰 도움이 됐어요.",
     rating: 5
   }
 ];
 
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div className="bg-white pt-40">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center overflow-hidden">
+      <section className="relative h-[calc(100vh-14rem)] flex items-center overflow-hidden rounded-[3rem] mx-4 md:mx-8 shadow-2xl">
         <div className="absolute inset-0 z-0">
           <img
             src="/images/hero-jeju.jpg"
@@ -65,7 +65,7 @@ export default function Home() {
             </h1>
             
             <p className="text-xl text-slate-200 mb-12 leading-relaxed max-w-xl drop-shadow-sm">
-              단순한 상품 판매가 아닌, 데이터 기반의 정밀 분석으로 
+              단순한 상품 판매가 아닌, 데이터 기반의 정밀 진단으로 
               고객님의 생애 주기에 최적화된 가치를 제안합니다.
             </p>
             
@@ -117,7 +117,7 @@ export default function Home() {
               {
                 icon: <TrendingUp className="text-secondary" size={32} />,
                 title: "종합 자산 관리",
-                desc: "보험을 넘어 연금, 저축, 투자까지 고려한 생애 주기별 맞춤 포트폴리오를 제안합니다."
+                desc: "보험을 넘어 연금, 저축, 투자까지 고려한 생애 주기별 최적의 포트폴리오를 제안합니다."
               },
               {
                 icon: <HeartHandshake className="text-primary" size={32} />,
@@ -177,7 +177,7 @@ export default function Home() {
                   to="/apply"
                   className="inline-flex items-center gap-3 gradient-secondary text-white px-10 py-5 rounded-2xl text-lg font-bold hover:shadow-[0_20px_40px_-10px_rgba(244,129,31,0.4)] hover:-translate-y-1 transition-all"
                 >
-                  내 보험 정밀 분석 시작하기 <ArrowRight size={20} />
+                  내 보험 정밀 진단 시작하기 <ArrowRight size={20} />
                 </Link>
               </div>
             </motion.div>
@@ -187,7 +187,7 @@ export default function Home() {
                 <div className="flex items-center justify-between mb-12">
                   <div className="flex flex-col">
                     <h4 className="font-bold text-2xl mb-1">보장 분석 리포트</h4>
-                    <span className="text-slate-400 text-sm">AI 정밀 분석 시스템 v2.0</span>
+                    <span className="text-slate-400 text-sm">AI 정밀 진단 시스템 v2.0</span>
                   </div>
                   <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
                     <div className="w-3 h-3 rounded-full bg-secondary animate-ping"></div>
@@ -297,7 +297,7 @@ export default function Home() {
                 당신의 보험, <br className="md:hidden" /> 전문가의 시선으로 <br className="hidden md:block" /> 다시 보세요
               </h3>
               <p className="text-blue-100 text-lg mb-12 max-w-2xl mx-auto">
-                단순한 가입 권유가 아닌, 데이터 기반의 정밀 분석 서비스를 제공합니다. 
+                단순한 가입 권유가 아닌, 데이터 기반의 정밀 진단 서비스를 제공합니다. 
                 지금 바로 전문가 상담을 예약하세요.
               </p>
               <Link
