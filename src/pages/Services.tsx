@@ -75,7 +75,7 @@ export default function Services() {
   }, [location]);
 
   return (
-    <div className="pt-20">
+    <div className="py-32">
       {/* Header */}
       <section className="bg-light-gray py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

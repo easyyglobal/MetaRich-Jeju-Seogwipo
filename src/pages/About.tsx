@@ -3,7 +3,7 @@ import { Award, Users, Heart, MapPin } from 'lucide-react';
 
 export default function About() {
   return (
-    <div>
+    <div className="py-32">
       {/* Hero */}
       <section className="bg-primary py-24 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

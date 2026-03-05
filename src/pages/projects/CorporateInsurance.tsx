@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function CorporateInsurance() {
   return (
-    <div>
+    <div className="py-32">
       <section className="relative py-24 overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0 opacity-20">
           <img src="/images/corporate-hero.jpg" alt="Building" className="w-full h-full object-cover" />

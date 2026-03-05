@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function JejuSpecial() {
   return (
-    <div>
+    <div className="py-32">
       <section className="relative h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src="/images/jeju-special-hero.jpg" alt="Jeju Forest" className="w-full h-full object-cover" />
