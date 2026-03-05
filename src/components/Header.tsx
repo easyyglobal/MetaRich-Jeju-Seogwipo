@@ -84,7 +84,7 @@ export default function Header() {
                   "text-sm font-semibold transition-all relative group",
                   location.pathname === item.path 
                     ? (scrolled || !isDarkHeroPage ? "text-primary" : "text-white") 
-                    : getTextColor() + " hover:text-primary"
+                    : getTextColor()
                 )}
               >
                 {item.name}
@@ -104,7 +104,7 @@ export default function Header() {
             >
               <button className={cn(
                 "flex items-center gap-1 text-sm font-semibold transition-colors",
-                getTextColor(), "hover:text-primary"
+                getTextColor()
               )}>
                 지점 특별 사업
                 <ChevronDown size={14} className={cn("transition-transform duration-300", isDropdownOpen && "rotate-180")} />
@@ -140,7 +140,7 @@ export default function Header() {
             >
               <button className={cn(
                 "flex items-center gap-1 text-sm font-semibold transition-colors",
-                getTextColor(), "hover:text-primary"
+                getTextColor()
               )}>
                 금융소비자보호
                 <ChevronDown size={14} className={cn("transition-transform duration-300", isProtectionOpen && "rotate-180")} />
