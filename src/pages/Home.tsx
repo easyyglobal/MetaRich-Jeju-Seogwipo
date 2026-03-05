@@ -26,9 +26,9 @@ const testimonials = [
 
 export default function Home() {
   return (
-    <div className="bg-white pt-40">
-      {/* Hero Section */}
-      <section className="relative h-[calc(100vh-14rem)] flex items-center overflow-hidden rounded-[3rem] mx-4 md:mx-8 shadow-2xl">
+    <div className="bg-white">
+      {/* Hero Section - 풀 스크린으로 수정됨 */}
+      <section className="relative h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="/images/hero-jeju.jpg"
@@ -36,6 +36,7 @@ export default function Home() {
             className="w-full h-full object-cover scale-105"
             referrerPolicy="no-referrer"
           />
+          {/* 하단으로 갈수록 자연스럽게 흰색 배경과 연결되는 그라데이션 */}
           <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-white"></div>
         </div>
 
