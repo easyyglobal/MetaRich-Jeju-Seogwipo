@@ -75,9 +75,9 @@ export default function Services() {
   }, [location]);
 
   return (
-    <div className="pt-20">
+    <div >
       {/* Header */}
-      <section className="bg-light-gray py-20">
+      <section className="bg-light-gray pt-[180px] pb-[100px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold mb-4">서비스 안내</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
