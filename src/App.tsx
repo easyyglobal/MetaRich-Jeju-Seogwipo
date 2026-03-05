@@ -10,6 +10,9 @@ import Apply from './pages/Apply';
 import CorporateInsurance from './pages/projects/CorporateInsurance';
 import FinancialEducation from './pages/projects/FinancialEducation';
 import JejuSpecial from './pages/projects/JejuSpecial';
+import Regulations from './pages/protection/Regulations';
+import Privacy from './pages/protection/Privacy';
+import Certificate from './pages/protection/Certificate';
 import ScrollToTopButton from './components/ScrollToTopButton';
 
 function ScrollToTop() {
@@ -36,6 +39,9 @@ export default function App() {
             <Route path="/projects/corporate" element={<CorporateInsurance />} />
             <Route path="/projects/education" element={<FinancialEducation />} />
             <Route path="/projects/jeju" element={<JejuSpecial />} />
+            <Route path="/protection/regulations" element={<Regulations />} />
+            <Route path="/protection/privacy" element={<Privacy />} />
+            <Route path="/protection/certificate" element={<Certificate />} />
           </Routes>
         </main>
         <Footer />
