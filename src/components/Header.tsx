@@ -65,8 +65,13 @@ export default function Header() {
           scrolled ? "glass shadow-lg" : "bg-transparent"
         )}>
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center shadow-lg group-hover:rotate-12 transition-transform">
-              <span className="text-white font-bold text-xl">M</span>
+            <div className="w-10 h-10 flex items-center justify-center group-hover:rotate-12 transition-transform">
+              <img 
+                src="/images/logo.png" // 이 부분을 실제 파일 경로로 수정하세요!
+                alt="메타리치 로고" 
+                className="w-full h-full object-contain"
+                referrerPolicy="no-referrer"
+              />
             </div>
             <div className="flex flex-col">
               <span className={cn("font-bold text-lg leading-tight transition-colors", getTextColor())}>메타리치</span>
@@ -201,8 +206,13 @@ export default function Header() {
             <div className="flex flex-col h-full p-8">
               <div className="flex justify-between items-center mb-12">
                 <div className="flex items-center space-x-2">
-                  <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center">
-                    <span className="text-white font-bold text-xl">M</span>
+                  <div className="w-10 h-10 flex items-center justify-center">
+                    <img 
+                      src="/images/logo.png"  /*  여기도 똑같이 이미지 경로 입력 */
+                      alt="메타리치 로고" 
+                      className="w-full h-full object-contain"
+                      referrerPolicy="no-referrer"
+                    />
                   </div>
                   <span className="font-bold text-xl">메타리치</span>
                 </div>
