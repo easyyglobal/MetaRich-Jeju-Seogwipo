@@ -8,9 +8,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 gradient-primary rounded flex items-center justify-center">
-                <span className="text-white font-bold text-lg">M</span>
-              </div>
+              <div className="w-10 h-10 flex items-center justify-center group-hover:rotate-12 transition-transform">
+              <img 
+                src="/images/logo.png" // 이 부분을 실제 파일 경로로 수정하세요!
+                alt="메타리치 로고" 
+                className="w-full h-full object-contain"
+                referrerPolicy="no-referrer"
+              />
+            </div>
               <span className="text-white font-bold text-xl tracking-tight">메타리치 서귀포</span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
@@ -18,7 +23,7 @@ export default function Footer() {
               보험을 넘어 당신의 인생을 함께 설계합니다.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="https://www.instagram.com/metarich_jeju?igsh=MXZkeWp1MThxZHc5OA==" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors">
                 <Instagram size={20} />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors">
@@ -38,11 +43,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-6">고객 지원</h3>
+            <h3 className="text-lg font-bold mb-6">금융소비자보호</h3>
             <ul className="space-y-4 text-slate-400 text-sm">
-              <li><Link to="/process" className="hover:text-white transition-colors">자주 묻는 질문</Link></li>
-              <li><a href="#" className="hover:text-white transition-colors">개인정보처리방침</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">이용약관</a></li>
+              <li><Link to="/regulations" className="hover:text-white transition-colors">금융소비자보호규정</Link></li>
+              <li><Link to="/privacy" className="hover:text-white transition-colors">개인정보처리방침</Link></li>
+              <li><Link to="/certificate" className="hover:text-white transition-colors">보험대리점등록증</Link></li>
             </ul>
           </div>
 
@@ -81,18 +86,15 @@ export default function Footer() {
               <div className="space-y-2">
                 <p>• 기존 보험계약을 해지하고 새로운 보험계약을 체결하는 경우 보험인수가 거절되거나 보험료가 인상될 수 있으며, 보장내용이 달라질 수 있습니다.</p>
                 <p>• 본 광고는 광고심의기준을 준수하였으며, 유효기간은 심의일로부터 1년입니다.</p>
-                <p className="text-slate-500 mt-2">준법감시인 심의필 제2024-0000호 (2024.03.01 ~ 2025.02.28)</p>
+                <p className="text-slate-500 mt-2">준법감시인 심의필 제2026-0000호 (2026.03.01 ~ 2027.02.28)</p>
               </div>
             </div>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-[11px]">
-          <p>© 2024 메타리치 제주 서귀포지점. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-slate-300">개인정보처리방침</a>
-            <a href="#" className="hover:text-slate-300">이용약관</a>
-          </div>
+          <p> </p>
+          <p>© 2026 메타리치 제주 서귀포지점. All rights reserved.</p>
         </div>
       </div>
     </footer>
