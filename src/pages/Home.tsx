@@ -90,9 +90,9 @@ export default function Home() {
       </section>
 
       {/* Value Proposition */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="mb-12 md:mb-0 md:py-32 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-20 gap-8">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-8 md:mb-20 gap-4 md:gap-8">
             <div className="max-w-2xl">
               <h2 className="text-2xl md:text-5xl font-bold mb-4 md:mb-6 tracking-tight">
                 우리는 <span className="text-primary">자산관리의 본질</span>에 <br /> 집중합니다
@@ -134,7 +134,7 @@ export default function Home() {
                 transition={{ delay: idx * 0.1 }}
                 className="p-6 md:p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 card-hover"
               >
-                <div className="w-10 md:w-16 h-10 md:h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-8">
+                <div className="w-10 md:w-16 h-10 md:h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-4 md:mb-8">
                   {item.icon}
                 </div>
                 <h3 className="md:text-2xl font-bold mb-4">{item.title}</h3>
@@ -173,21 +173,21 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <div className="mt-16">
+              <div className="mt-12 md:mt-16">
                 <Link
                   to="/apply"
                   className="inline-flex items-center gap-3 gradient-secondary text-white px-10 py-5 rounded-2xl text-lg font-bold hover:shadow-[0_20px_40px_-10px_rgba(244,129,31,0.4)] hover:-translate-y-1 transition-all"
                 >
-                  내 보험 정밀 분석 시작하기 <ArrowRight size={20} />
+                  내 보험 정밀 분석 문의하기 <ArrowRight size={20} />
                 </Link>
               </div>
             </motion.div>
             
             <div className="relative">
-              <div className="glass-dark p-8 md:p-10 rounded-[2rem] md:rounded-[3rem] border-white/10 shadow-2xl">
+              <div className="glass-dark p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] border-white/10 shadow-2xl">
                 <div className="flex items-center justify-between mb-12">
                   <div className="flex flex-col">
-                    <h4 className="font-bold text-2xl mb-1">보장 분석 리포트</h4>
+                    <h4 className="font-bold md:text-2xl mb-1">보장 분석 리포트</h4>
                     <span className="text-slate-400 text-sm">정밀 분석 시스템 예시</span>
                   </div>
                   <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
@@ -280,11 +280,11 @@ export default function Home() {
       </section>
 
       {/* Quick CTA Banner */}
-      <section className="py-16 md:py-32 bg-slate-50">
+      <section className="md:py-16 md:py-32 bg-slate-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             whileHover={{ scale: 1.02 }}
-            className="gradient-primary rounded-[3rem] p-8 md:p-20 shadow-2xl relative overflow-hidden text-center"
+            className="gradient-primary rounded-[3rem] p-10 md:p-20 shadow-2xl relative overflow-hidden text-center"
           >
             <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
               <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -297,7 +297,7 @@ export default function Home() {
               <h3 className="text-2xl md:text-5xl font-bold text-white mb-4 md:mb-8 leading-tight">
                 당신의 보험, <br className="md:hidden" /> 전문가의 시선으로 <br className="hidden md:block" /> 다시 보세요
               </h3>
-              <p className="text-blue-100 md:text-lg mb-10 md:mb-12 max-w-2xl mx-auto">
+              <p className="text-blue-100 md:text-lg mb-6 md:mb-12 max-w-2xl mx-auto">
                 단순한 가입 권유가 아닌, 데이터 기반의 정밀 분석 서비스를 제공합니다. 
                 지금 바로 전문가 상담을 예약하세요.
               </p>
