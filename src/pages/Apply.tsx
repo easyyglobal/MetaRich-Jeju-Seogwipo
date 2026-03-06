@@ -74,14 +74,13 @@ export default function Apply() {
     <div className="pt-20 bg-slate-50 min-h-screen">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">정밀 보장분석 및 진단 신청</h1>
+          <h1 className="text-2xl md:text-5xl font-bold mb-4 md:mb-6 tracking-tight">정밀 분석 신청</h1>
           <p className="text-slate-500 text-lg">
             전문가의 정밀 분석을 통해 내 보험의 건강 상태를 확인해 보세요. <br className="hidden md:block" />
-            데이터 기반의 객관적인 진단 리포트를 제공해 드립니다.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-12">
           <div className="lg:col-span-2">
             <form onSubmit={handleSubmit} className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl border border-slate-100 space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

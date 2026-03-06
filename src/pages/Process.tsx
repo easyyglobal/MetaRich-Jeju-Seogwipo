@@ -55,15 +55,15 @@ export default function Process() {
   return (
     <div>
       {/* Process Header */}
-      <section className="bg-white pt-[180px] pb-[100px] border-b border-gray-100">
+      <section className="bg-white pt-[140px] md:pt-[180px] pb-[50px] md:pb-[100px] border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold mb-4">상담 프로세스</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">상담 프로세스</h1>
           <p className="text-gray-600">투명하고 체계적인 5단계 과정을 통해 최상의 솔루션을 약속합니다.</p>
         </div>
       </section>
 
       {/* Steps */}
-      <section className="py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative">
             {/* Connection Line (Desktop) */}
@@ -94,10 +94,10 @@ export default function Process() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 bg-light-gray">
+      <section className="py-16 md:py-24 bg-light-gray">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">자주 묻는 질문</h2>
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">자주 묻는 질문</h2>
             <p className="text-gray-600">궁금하신 점을 미리 확인해 보세요.</p>
           </div>
 

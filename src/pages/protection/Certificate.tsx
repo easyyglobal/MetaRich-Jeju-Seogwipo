@@ -5,14 +5,14 @@ export default function Certificate() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-slate-900 pt-[180px] pb-[100px] text-white relative overflow-hidden">
+      <section className="bg-slate-900 pt-[140px] md:pt-[180px] pb-[50px] md:pb-[100px] text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">보험대리점 등록증</h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            <h1 className="text-3xl md:text-5xl font-bold mb-6">보험대리점 등록증</h1>
+            <p className="md:text-xl text-slate-400 max-w-2xl mx-auto md:leading-relaxed">
               메타리치는 법규를 준수하며 정식 등록된 전문 보험대리점입니다. <br className="hidden md:block" />
               투명한 정보 공개로 고객님의 신뢰에 보답하겠습니다.
             </p>
@@ -21,11 +21,11 @@ export default function Certificate() {
       </section>
 
       {/* Content */}
-      <section className="py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 gap-16 items-start">
             <div>
-              <h2 className="text-3xl font-bold mb-8">대리점 등록 정보</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">대리점 등록 정보</h2>
               <div className="space-y-6">
                 {[
                   { label: "대리점명", value: "메타리치 (MetaRich)" },

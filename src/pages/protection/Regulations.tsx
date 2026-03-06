@@ -5,7 +5,7 @@ export default function Regulations() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-slate-900 pt-[180px] pb-[100px] text-white relative overflow-hidden">
+      <section className="bg-slate-900 pt-[140px] md:pt-[180px] pb-[50px] md:pb-[100px] text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
             <path d="M0 100 C 20 0 50 0 100 100" stroke="white" fill="transparent" strokeWidth="0.5" />
@@ -16,8 +16,8 @@ export default function Regulations() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">금융소비자보호규정</h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            <h1 className="text-3xl md:text-5xl font-bold mb-6">금융소비자보호규정</h1>
+            <p className="md:text-xl text-slate-400 max-w-2xl mx-auto md:leading-relaxed">
               메타리치 서귀포지점은 금융소비자의 권익을 보호하고 <br className="hidden md:block" />
               건전한 금융 질서를 확립하기 위해 최선을 다합니다.
             </p>
@@ -26,7 +26,7 @@ export default function Regulations() {
       </section>
 
       {/* Content */}
-      <section className="py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             <div>

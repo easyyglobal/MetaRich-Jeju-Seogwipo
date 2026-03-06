@@ -24,7 +24,7 @@ export default function Privacy() {
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-slate max-w-none">
-            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 mb-12">
+            <div className="bg-slate-50 p-6 md:p-8 rounded-3xl border border-slate-100 mb-12">
               <p className="text-slate-600 leading-relaxed">
                 메타리치 서귀포지점(이하 '회사')은 고객의 개인정보를 중요시하며, "개인정보 보호법" 등 관련 법령을 준수하고 있습니다. 
                 회사는 개인정보처리방침을 통하여 고객님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 
@@ -78,7 +78,7 @@ export default function Privacy() {
               </section>
             </div>
 
-            <div className="mt-16 p-6 rounded-2xl bg-primary/5 border border-primary/10">
+            <div className="mt-8 md:mt-16 p-6 rounded-2xl bg-primary/5 border border-primary/10">
               <p className="text-xs text-slate-500 leading-relaxed">
                 본 방침은 2026년 3월 1일부터 시행됩니다. 내용의 추가, 삭제 및 수정이 있을 시에는 홈페이지를 통해 고지할 것입니다.
               </p>
