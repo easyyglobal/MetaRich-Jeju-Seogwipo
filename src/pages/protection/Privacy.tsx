@@ -80,7 +80,7 @@ export default function Privacy() {
 
             <div className="mt-16 p-6 rounded-2xl bg-primary/5 border border-primary/10">
               <p className="text-xs text-slate-500 leading-relaxed">
-                본 방침은 2024년 3월 1일부터 시행됩니다. 내용의 추가, 삭제 및 수정이 있을 시에는 홈페이지를 통해 고지할 것입니다.
+                본 방침은 2026년 3월 1일부터 시행됩니다. 내용의 추가, 삭제 및 수정이 있을 시에는 홈페이지를 통해 고지할 것입니다.
               </p>
             </div>
           </div>

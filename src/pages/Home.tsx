@@ -33,7 +33,7 @@ export default function Home() {
           <img
             src="/images/hero-jeju.jpg"
             alt="Jeju Landscape"
-            className="w-full h-full object-cover scale-105"
+            className="w-full h-full object-cover object-right md:object-center scale-105"
             referrerPolicy="no-referrer"
           />
           {/* 하단으로 갈수록 자연스럽게 흰색 배경과 연결되는 그라데이션 */}
@@ -66,7 +66,7 @@ export default function Home() {
             </h1>
             
             <p className="text-xl text-slate-200 mb-12 leading-relaxed max-w-xl drop-shadow-sm">
-              단순한 상품 판매가 아닌, 데이터 기반의 정밀 진단으로 
+              단순한 상품 판매가 아닌, 데이터 기반의 정밀 분석으로 
               고객님의 생애 주기에 최적화된 가치를 제안합니다.
             </p>
             
@@ -75,7 +75,7 @@ export default function Home() {
                 to="/apply"
                 className="gradient-primary text-white px-10 py-5 rounded-2xl text-lg font-bold hover:shadow-[0_20px_40px_-10px_rgba(0,96,174,0.4)] hover:-translate-y-1 transition-all flex items-center justify-center gap-2 group"
               >
-                정밀 보장분석 신청하기
+                정밀 분석 신청하기
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -118,7 +118,7 @@ export default function Home() {
               {
                 icon: <TrendingUp className="text-secondary" size={32} />,
                 title: "종합 자산 관리",
-                desc: "보험을 넘어 연금, 저축, 투자까지 고려한 생애 주기별 최적의 포트폴리오를 제안합니다."
+                desc: "보험을 넘어 연금, 저축, 투자까지 고려한 생애 주기별 맞춤 포트폴리오를 제안합니다."
               },
               {
                 icon: <HeartHandshake className="text-primary" size={32} />,
@@ -178,7 +178,7 @@ export default function Home() {
                   to="/apply"
                   className="inline-flex items-center gap-3 gradient-secondary text-white px-10 py-5 rounded-2xl text-lg font-bold hover:shadow-[0_20px_40px_-10px_rgba(244,129,31,0.4)] hover:-translate-y-1 transition-all"
                 >
-                  내 보험 정밀 진단 시작하기 <ArrowRight size={20} />
+                  내 보험 정밀 분석 시작하기 <ArrowRight size={20} />
                 </Link>
               </div>
             </motion.div>
@@ -188,7 +188,7 @@ export default function Home() {
                 <div className="flex items-center justify-between mb-12">
                   <div className="flex flex-col">
                     <h4 className="font-bold text-2xl mb-1">보장 분석 리포트</h4>
-                    <span className="text-slate-400 text-sm">AI 정밀 진단 시스템 v2.0</span>
+                    <span className="text-slate-400 text-sm">정밀 분석 시스템 예시</span>
                   </div>
                   <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
                     <div className="w-3 h-3 rounded-full bg-secondary animate-ping"></div>
@@ -298,7 +298,7 @@ export default function Home() {
                 당신의 보험, <br className="md:hidden" /> 전문가의 시선으로 <br className="hidden md:block" /> 다시 보세요
               </h3>
               <p className="text-blue-100 text-lg mb-12 max-w-2xl mx-auto">
-                단순한 가입 권유가 아닌, 데이터 기반의 정밀 진단 서비스를 제공합니다. 
+                단순한 가입 권유가 아닌, 데이터 기반의 정밀 분석 서비스를 제공합니다. 
                 지금 바로 전문가 상담을 예약하세요.
               </p>
               <Link

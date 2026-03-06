@@ -12,7 +12,7 @@ const navItems = [
 ];
 
 const specialProjects = [
-  { name: '기업/단체 보험', path: '/projects/corporate' },
+
   { name: '금융 교육 세미나', path: '/projects/education' },
   { name: '제주 특화 사업', path: '/projects/jeju' },
 ];
@@ -33,7 +33,7 @@ export default function Header() {
   const darkHeroPages = [
     '/', 
     '/about', 
-    '/projects/corporate', 
+    
     '/projects/education', 
     '/projects/jeju',
     '/protection/regulations',
