@@ -33,7 +33,7 @@ export default function Home() {
           <img
             src="/images/hero-jeju.jpg"
             alt="Jeju Landscape"
-            className="w-full h-full object-cover object-right md:object-center scale-105"
+            className="w-full h-full object-cover object-center scale-105"
             referrerPolicy="no-referrer"
           />
           {/* 하단으로 갈수록 자연스럽게 흰색 배경과 연결되는 그라데이션 */}
@@ -59,13 +59,13 @@ export default function Home() {
               </span>
             </motion.div>
             
-            <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] mb-8 tracking-tight drop-shadow-sm">
+            <h1 className="text-4xl md:text-7xl font-bold text-white leading-[1.1] mb-6 md:mb-8 tracking-tight drop-shadow-sm">
               보험을 넘어 <br />
               <span className="text-gradient">당신의 인생을</span> <br />
               설계합니다.
             </h1>
             
-            <p className="text-xl text-slate-200 mb-12 leading-relaxed max-w-xl drop-shadow-sm">
+            <p className="md:text-xl text-slate-200 mb-12 leading-relaxed max-w-xl drop-shadow-sm">
               단순한 상품 판매가 아닌, 데이터 기반의 정밀 분석으로 
               고객님의 생애 주기에 최적화된 가치를 제안합니다.
             </p>
@@ -92,12 +92,12 @@ export default function Home() {
       {/* Value Proposition */}
       <section className="py-32 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-20 gap-8">
             <div className="max-w-2xl">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+              <h2 className="text-2xl md:text-5xl font-bold mb-4 md:mb-6 tracking-tight">
                 우리는 <span className="text-primary">자산관리의 본질</span>에 <br /> 집중합니다
               </h2>
-              <p className="text-slate-500 text-lg">
+              <p className="text-slate-500 md:text-lg">
                 메타리치 서귀포지점은 고객의 현재와 미래를 잇는 가장 견고한 다리가 되어드립니다.
               </p>
             </div>
@@ -132,13 +132,13 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 card-hover"
+                className="p-6 md:p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 card-hover"
               >
-                <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-8">
+                <div className="w-10 md:w-16 h-10 md:h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-8">
                   {item.icon}
                 </div>
-                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                <p className="text-slate-500 leading-relaxed">{item.desc}</p>
+                <h3 className="md:text-2xl font-bold mb-4">{item.title}</h3>
+                <p className="text-slate-500 md:leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -146,19 +146,19 @@ export default function Home() {
       </section>
 
       {/* Pain Point & Solution */}
-      <section className="py-32 bg-slate-900 text-white overflow-hidden relative rounded-[3rem] mx-4 md:mx-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-16 md:py-32 bg-slate-900 text-white overflow-hidden relative rounded-[3rem] mx-4 md:mx-8">
+        <div className="max-w-7xl mx-auto px-6 md:px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-[1.2]">
+              <h2 className="text-3xl md:text-5xl font-bold mb-10 leading-[1.2]">
                 매달 나가는 보험료, <br />
                 <span className="text-secondary">제대로 보장</span>받고 <br /> 계신가요?
               </h2>
-              <div className="space-y-8">
+              <div className="space-y-4 md:space-y-8">
                 {[
                   "나도 모르게 중복 가입된 보험료 낭비",
                   "정작 큰 병에 걸렸을 때 부족한 진단비",
@@ -166,10 +166,10 @@ export default function Home() {
                   "복잡해서 포기하게 되는 보험금 청구"
                 ].map((text, i) => (
                   <div key={i} className="flex items-center gap-5 group">
-                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-secondary transition-colors">
+                    <div className="w-8 md:w-10 h-8 md:h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-secondary transition-colors">
                       <CheckCircle2 className="text-white" size={20} />
                     </div>
-                    <span className="text-xl text-slate-300 font-medium">{text}</span>
+                    <span className="md:text-xl text-slate-300 font-medium">{text}</span>
                   </div>
                 ))}
               </div>
@@ -184,7 +184,7 @@ export default function Home() {
             </motion.div>
             
             <div className="relative">
-              <div className="glass-dark p-10 rounded-[3rem] border-white/10 shadow-2xl">
+              <div className="glass-dark p-8 md:p-10 rounded-[2rem] md:rounded-[3rem] border-white/10 shadow-2xl">
                 <div className="flex items-center justify-between mb-12">
                   <div className="flex flex-col">
                     <h4 className="font-bold text-2xl mb-1">보장 분석 리포트</h4>
@@ -235,12 +235,12 @@ export default function Home() {
       {/* Testimonials */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">고객님들이 증명하는 <br /> <span className="text-primary">서귀포지점의 가치</span></h2>
-            <p className="text-slate-500 text-lg">실제 상담을 받으신 고객님들의 생생한 후기입니다.</p>
+          <div className="text-center mb-12 md:mb-20">
+            <h2 className="text-2xl md:text-5xl font-bold mb-2 md:mb-6 tracking-tight">고객님들이 증명하는 <br /> <span className="text-primary">서귀포지점의 가치</span></h2>
+            <p className="text-slate-500 md:text-lg">실제 상담을 받으신 고객님들의 생생한 후기입니다.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
             {testimonials.map((t, i) => (
               <motion.div
                 key={i}
@@ -248,7 +248,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-10 rounded-[2.5rem] bg-white border border-slate-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] relative group hover:shadow-xl transition-all"
+                className="p-8 md:p-10 rounded-[2.5rem] bg-white border border-slate-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] relative group hover:shadow-xl transition-all"
               >
                 <div className="absolute -top-6 left-10 w-12 h-12 gradient-primary rounded-2xl flex items-center justify-center shadow-lg">
                   <Quote className="text-white" size={24} />
@@ -260,11 +260,11 @@ export default function Home() {
                   ))}
                 </div>
                 
-                <p className="text-slate-700 leading-relaxed mb-8 font-medium">
+                <p className="text-slate-700 leading-relaxed mb-4 md:mb-8 font-medium">
                   "{t.content}"
                 </p>
                 
-                <div className="flex items-center gap-4 pt-6 border-t border-slate-50">
+                <div className="flex items-center gap-4 pt-4 md:pt-6 border-t border-slate-50">
                   <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-400">
                     {t.name[0]}
                   </div>
@@ -280,11 +280,11 @@ export default function Home() {
       </section>
 
       {/* Quick CTA Banner */}
-      <section className="py-32 bg-slate-50">
+      <section className="py-16 md:py-32 bg-slate-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             whileHover={{ scale: 1.02 }}
-            className="gradient-primary rounded-[3rem] p-12 md:p-20 shadow-2xl relative overflow-hidden text-center"
+            className="gradient-primary rounded-[3rem] p-8 md:p-20 shadow-2xl relative overflow-hidden text-center"
           >
             <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
               <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -294,16 +294,16 @@ export default function Home() {
             </div>
             
             <div className="relative z-10">
-              <h3 className="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight">
+              <h3 className="text-2xl md:text-5xl font-bold text-white mb-4 md:mb-8 leading-tight">
                 당신의 보험, <br className="md:hidden" /> 전문가의 시선으로 <br className="hidden md:block" /> 다시 보세요
               </h3>
-              <p className="text-blue-100 text-lg mb-12 max-w-2xl mx-auto">
+              <p className="text-blue-100 md:text-lg mb-10 md:mb-12 max-w-2xl mx-auto">
                 단순한 가입 권유가 아닌, 데이터 기반의 정밀 분석 서비스를 제공합니다. 
                 지금 바로 전문가 상담을 예약하세요.
               </p>
               <Link
                 to="/apply"
-                className="inline-flex items-center gap-2 bg-white text-primary px-12 py-5 rounded-2xl text-xl font-bold hover:shadow-2xl hover:-translate-y-1 transition-all"
+                className="inline-flex items-center gap-2 bg-white text-primary px-12 py-4 md:py-5 rounded-2xl md:text-xl font-bold hover:shadow-2xl hover:-translate-y-1 transition-all"
               >
                 전문가 상담 예약하기 <ArrowRight size={24} />
               </Link>

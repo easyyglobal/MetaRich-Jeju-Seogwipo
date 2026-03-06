@@ -45,9 +45,9 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-6">금융소비자보호</h3>
             <ul className="space-y-4 text-slate-400 text-sm">
-              <li><Link to="/regulations" className="hover:text-white transition-colors">금융소비자보호규정</Link></li>
-              <li><Link to="/privacy" className="hover:text-white transition-colors">개인정보처리방침</Link></li>
-              <li><Link to="/certificate" className="hover:text-white transition-colors">보험대리점등록증</Link></li>
+              <li><Link to="/protection/regulations" className="hover:text-white transition-colors">금융소비자보호규정</Link></li>
+              <li><Link to="/protection/privacy" className="hover:text-white transition-colors">개인정보처리방침</Link></li>
+              <li><Link to="/protection/certificate" className="hover:text-white transition-colors">보험대리점등록증</Link></li>
             </ul>
           </div>
 
