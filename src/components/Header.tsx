@@ -61,7 +61,7 @@ export default function Header() {
     )}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={cn(
-          "flex justify-between items-center h-16 md:px-6 rounded-2xl transition-all duration-500",
+          "flex justify-between items-center h-16 px-4 md:px-6 rounded-2xl transition-all duration-500",
           scrolled ? "glass shadow-lg" : "bg-transparent"
         )}>
           <Link to="/" className="flex items-center space-x-2 group">

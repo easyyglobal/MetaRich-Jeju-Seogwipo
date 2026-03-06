@@ -77,9 +77,9 @@ export default function Services() {
   return (
     <div >
       {/* Header */}
-      <section className="bg-light-gray pt-[180px] pb-[100px]">
+      <section className="bg-light-gray pt-[140px] md:pt-[180px] pb-[50px] md:pb-[100px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold mb-4">서비스 안내</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">서비스 안내</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             메타리치 서귀포지점은 고객님의 더 나은 내일을 위해 <br className="hidden md:block" />
             다양하고 전문적인 금융 서비스를 제공합니다.
@@ -88,16 +88,16 @@ export default function Services() {
       </section>
 
       {/* Core Services */}
-      <section className="py-24 bg-white">
+      <section className="pt-[65px] md:py-24 pb-[65px] bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
             {services.map((service) => (
-              <div key={service.id} className="flex flex-col p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 card-hover">
-                <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-8">
+              <div key={service.id} className="flex flex-col p-8 md:p-10 pb-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 card-hover">
+                <div className="w-12 md:w-16 h-12 md:h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-4 md:mb-8">
                   {React.cloneElement(service.icon as React.ReactElement<any>, { size: 32 })}
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                <p className="text-slate-500 mb-8 leading-relaxed">{service.desc}</p>
+                <p className="text-slate-500 mb-4 md:mb-8 md:leading-relaxed">{service.desc}</p>
                 <ul className="space-y-3 mt-auto">
                   {service.details.map((detail, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-slate-600">

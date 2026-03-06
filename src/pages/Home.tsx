@@ -108,7 +108,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-10">
             {[
               {
                 icon: <ShieldCheck className="text-primary" size={32} />,
@@ -158,14 +158,14 @@ export default function Home() {
                 매달 나가는 보험료, <br />
                 <span className="text-secondary">제대로 보장</span>받고 <br /> 계신가요?
               </h2>
-              <div className="space-y-4 md:space-y-8">
+              <div className="space-y-2 md:space-y-8">
                 {[
                   "나도 모르게 중복 가입된 보험료 낭비",
                   "정작 큰 병에 걸렸을 때 부족한 진단비",
                   "시대에 뒤떨어진 옛날 보험의 한계",
                   "복잡해서 포기하게 되는 보험금 청구"
                 ].map((text, i) => (
-                  <div key={i} className="flex items-center gap-5 group">
+                  <div key={i} className="flex items-center gap-3 md:gap-5 group">
                     <div className="w-8 md:w-10 h-8 md:h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-secondary transition-colors">
                       <CheckCircle2 className="text-white" size={20} />
                     </div>
@@ -176,7 +176,7 @@ export default function Home() {
               <div className="mt-12 md:mt-16">
                 <Link
                   to="/apply"
-                  className="inline-flex items-center gap-3 gradient-secondary text-white px-10 py-5 rounded-2xl text-lg font-bold hover:shadow-[0_20px_40px_-10px_rgba(244,129,31,0.4)] hover:-translate-y-1 transition-all"
+                  className="inline-flex items-center gap-3 gradient-secondary text-white px-10 py-5 rounded-2xl md:text-lg font-bold hover:shadow-[0_20px_40px_-10px_rgba(244,129,31,0.4)] hover:-translate-y-1 transition-all"
                 >
                   내 보험 정밀 분석 문의하기 <ArrowRight size={20} />
                 </Link>
@@ -280,7 +280,7 @@ export default function Home() {
       </section>
 
       {/* Quick CTA Banner */}
-      <section className="md:py-16 md:py-32 bg-slate-50">
+      <section className="py-16 md:py-32 bg-slate-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             whileHover={{ scale: 1.02 }}
