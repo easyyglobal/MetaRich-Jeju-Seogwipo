@@ -178,7 +178,7 @@ export default function Header() {
               className="gradient-primary text-white px-6 py-2.5 rounded-xl text-sm font-bold hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-2"
             >
               <Phone size={16} />
-              정밀 진단 신청
+              정밀 분석 신청
             </Link>
           </nav>
 

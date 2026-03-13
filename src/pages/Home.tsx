@@ -113,7 +113,7 @@ export default function Home() {
               {
                 icon: <ShieldCheck className="text-primary" size={32} />,
                 title: "정밀 보장 분석",
-                desc: "중복된 보험료는 줄이고, 부족한 보장은 채우는 과학적인 리모델링 서비스를 제공합니다."
+                desc: "중복된 보험료는 줄이고, 부족한 보장은 채우는 전문적인 컨설팅 서비스를 제공합니다."
               },
               {
                 icon: <TrendingUp className="text-secondary" size={32} />,
@@ -160,9 +160,9 @@ export default function Home() {
               </h2>
               <div className="space-y-2 md:space-y-8">
                 {[
-                  "나도 모르게 중복 가입된 보험료 낭비",
+                  "나도 모르게 중복 가입된 보험료",
                   "정작 큰 병에 걸렸을 때 부족한 진단비",
-                  "시대에 뒤떨어진 옛날 보험의 한계",
+                  "어쩔 수 없는 옛날 보험의 한계",
                   "복잡해서 포기하게 되는 보험금 청구"
                 ].map((text, i) => (
                   <div key={i} className="flex items-center gap-3 md:gap-5 group">
@@ -176,7 +176,7 @@ export default function Home() {
               <div className="mt-12 md:mt-16">
                 <Link
                   to="/apply"
-                  className="inline-flex items-center gap-3 gradient-secondary text-white px-10 py-5 rounded-2xl md:text-lg font-bold hover:shadow-[0_20px_40px_-10px_rgba(244,129,31,0.4)] hover:-translate-y-1 transition-all"
+                  className="flex md:inline-flex w-full md:w-auto justify-center items-center gap-3 gradient-secondary text-white px-10 py-5 rounded-2xl md:text-lg font-bold hover:shadow-[0_20px_40px_-10px_rgba(244,129,31,0.4)] hover:-translate-y-1 transition-all"
                 >
                   내 보험 정밀 분석 문의하기 <ArrowRight size={20} />
                 </Link>
