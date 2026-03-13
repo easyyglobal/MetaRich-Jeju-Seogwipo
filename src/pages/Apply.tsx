@@ -142,7 +142,7 @@ export default function Apply() {
       alert('상담 분야를 선택해 주세요.');
       return;
     }
-    
+
     if (!formData.agree) {
       alert('개인정보 수집 및 이용에 동의해 주세요.');
       return;
@@ -182,7 +182,7 @@ export default function Apply() {
     <div className="pt-20 bg-slate-50 min-h-screen">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
-          <h1 className="text-2xl md:text-5xl font-bold mb-4 md:mb-6 tracking-tight">정밀 분석 신청</h1>
+          <h1 className="text-2xl md:text-5xl font-bold mb-4 md:mb-6 tracking-tight">문의하기</h1>
           <p className="text-slate-500 text-lg">
             전문가의 정밀 분석을 통해 내 보험의 건강 상태를 확인해 보세요. <br className="hidden md:block" />
           </p>
@@ -363,7 +363,7 @@ export default function Apply() {
                     신청 처리 중...
                   </>
                 ) : (
-                  '보장분석 상담 신청하기'
+                  '상담 문의하기'
                 )}
               </button>
             </form>
