@@ -23,15 +23,87 @@ export default function Apply() {
     }
   }, [success]);
 
-  const recentApplications = [
-    { name: '김*수', region: '서귀포시 대정읍', time: '3분 전', type: '보장분석' },
-    { name: '이*영', region: '서귀포시 남원읍', time: '12분 전', type: '재무설계' },
-    { name: '박*지', region: '제주시 노형동', time: '28분 전', type: '보장분석' },
-    { name: '최*우', region: '서귀포시 성산읍', time: '1시간 전', type: '기업보험' },
-    { name: '정*희', region: '서귀포시 서홍동', time: '2시간 전', type: '보장분석' },
-    { name: '강*훈', region: '제주시 아라동', time: '3시간 전', type: '교육세미나' },
-    { name: '윤*자', region: '서귀포시 중문동', time: '5시간 전', type: '보장분석' },
-  ];
+  // 50개의 넉넉한 가짜 데이터 풀 및 랜덤 시간 생성 로직
+  const recentApplications = React.useMemo(() => {
+    const pool = [
+      { name: '김*수', region: '서귀포시 대정읍', type: '보장분석' },
+      { name: '이*영', region: '서귀포시 남원읍', type: '재무설계' },
+      { name: '박*지', region: '제주시 노형동', type: '보장분석' },
+      { name: '최*우', region: '서귀포시 성산읍', type: '기업보험' },
+      { name: '정*희', region: '서귀포시 서홍동', type: '보장분석' },
+      { name: '강*훈', region: '제주시 아라동', type: '교육세미나' },
+      { name: '윤*자', region: '서귀포시 중문동', type: '보장분석' },
+      { name: '송*민', region: '제주시 연동', type: '재무설계' },
+      { name: '임*철', region: '서귀포시 표선면', type: '보장분석' },
+      { name: '한*주', region: '제주시 애월읍', type: '기업보험' },
+      { name: '오*성', region: '서귀포시 안덕면', type: '보장분석' },
+      { name: '서*진', region: '제주시 이도동', type: '재무설계' },
+      { name: '권*태', region: '서귀포시 동홍동', type: '보장분석' },
+      { name: '황*미', region: '제주시 화북동', type: '재무설계' },
+      { name: '안*석', region: '서귀포시 효돈동', type: '보장분석' },
+      { name: '류*현', region: '제주시 삼양동', type: '기업보험' },
+      { name: '조*아', region: '서귀포시 영천동', type: '보장분석' },
+      { name: '백*호', region: '제주시 오라동', type: '교육세미나' },
+      { name: '김*은', region: '서귀포시 정방동', type: '보장분석' },
+      { name: '이*현', region: '제주시 외도동', type: '재무설계' },
+      { name: '박*민', region: '서귀포시 천지동', type: '보장분석' },
+      { name: '최*서', region: '제주시 건입동', type: '기업보험' },
+      { name: '정*우', region: '서귀포시 송산동', type: '보장분석' },
+      { name: '강*진', region: '제주시 일도동', type: '재무설계' },
+      { name: '조*윤', region: '서귀포시 중앙동', type: '보장분석' },
+      { name: '윤*호', region: '제주시 용담동', type: '기업보험' },
+      { name: '장*희', region: '서귀포시 대륜동', type: '보장분석' },
+      { name: '임*영', region: '제주시 삼도동', type: '교육세미나' },
+      { name: '한*수', region: '서귀포시 남원읍', type: '보장분석' },
+      { name: '오*진', region: '제주시 구좌읍', type: '재무설계' },
+      { name: '서*우', region: '서귀포시 성산읍', type: '보장분석' },
+      { name: '신*아', region: '제주시 조천읍', type: '기업보험' },
+      { name: '권*민', region: '서귀포시 안덕면', type: '보장분석' },
+      { name: '황*준', region: '제주시 한림읍', type: '재무설계' },
+      { name: '안*희', region: '서귀포시 표선면', type: '보장분석' },
+      { name: '송*호', region: '제주시 애월읍', type: '교육세미나' },
+      { name: '류*진', region: '서귀포시 대정읍', type: '보장분석' },
+      { name: '고*수', region: '제주시 한경면', type: '재무설계' },
+      { name: '문*영', region: '서귀포시 서홍동', type: '보장분석' },
+      { name: '양*민', region: '제주시 우도면', type: '기업보험' },
+      { name: '손*우', region: '서귀포시 동홍동', type: '보장분석' },
+      { name: '배*진', region: '제주시 추자면', type: '재무설계' },
+      { name: '조*희', region: '서귀포시 대륜동', type: '보장분석' },
+      { name: '백*민', region: '제주시 노형동', type: '기업보험' },
+      { name: '허*우', region: '서귀포시 중문동', type: '보장분석' },
+      { name: '남*진', region: '제주시 연동', type: '교육세미나' },
+      { name: '심*희', region: '서귀포시 예래동', type: '보장분석' },
+      { name: '노*민', region: '제주시 아라동', type: '재무설계' },
+      { name: '하*우', region: '서귀포시 효돈동', type: '보장분석' },
+      { name: '곽*진', region: '제주시 이도동', type: '기업보험' }
+    ];
+
+    // 시간대별 랜덤 범위를 지정하여 항상 최근 순서대로 보이게 설정
+    const timeRanges = [
+      { min: 1, max: 5, unit: '분 전' },
+      { min: 6, max: 15, unit: '분 전' },
+      { min: 16, max: 35, unit: '분 전' },
+      { min: 36, max: 59, unit: '분 전' },
+      { min: 1, max: 2, unit: '시간 전' },
+      { min: 3, max: 5, unit: '시간 전' },
+      { min: 6, max: 12, unit: '시간 전' }
+    ];
+
+    const getRandomInt = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+    // 1. 50개의 데이터 풀을 무작위로 섞음
+    const shuffledPool = [...pool].sort(() => 0.5 - Math.random());
+    
+    // 2. 상위 7개를 뽑아서 각각 리얼한 랜덤 시간을 부여
+    return shuffledPool.slice(0, 7).map((item, index) => {
+      const range = timeRanges[index];
+      const randomTime = getRandomInt(range.min, range.max);
+      return {
+        ...item,
+        time: `${randomTime}${range.unit}`
+      };
+    });
+  }, []); // 빈 배열을 넣어 페이지에 들어올 때마다(새로고침 시) 새롭게 계산됨
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
