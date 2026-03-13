@@ -11,6 +11,7 @@ export default function Apply() {
     birth: '',
     phone: '',
     region: '',
+    serviceType: '',
     path: '인스타그램',
     recommender: '',
     agree: false
@@ -136,6 +137,12 @@ export default function Apply() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!formData.serviceType) {
+      alert('상담 분야를 선택해 주세요.');
+      return;
+    }
+    
     if (!formData.agree) {
       alert('개인정보 수집 및 이용에 동의해 주세요.');
       return;
@@ -231,6 +238,29 @@ export default function Apply() {
                   value={formData.region}
                   onChange={(e) => setFormData({ ...formData, region: e.target.value })}
                 />
+              </div>
+
+              <div>
+                <label className="block text-sm font-bold text-slate-700 mb-3">
+                  상담 분야 <span className="text-red-500">*</span>
+                </label>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  {['정밀 분석', '금융교육세미나', '제주 특화 사업'].map((type) => (
+                    <button
+                      key={type}
+                      type="button"
+                      onClick={() => setFormData({ ...formData, serviceType: type })}
+                      className={cn(
+                        "py-3 rounded-xl text-sm font-bold transition-all border",
+                        formData.serviceType === type 
+                          ? "bg-secondary text-white border-secondary shadow-md" 
+                          : "bg-white text-slate-500 border-slate-200 hover:border-secondary/30"
+                      )}
+                    >
+                      {type}
+                    </button>
+                  ))}
+                </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
