@@ -59,7 +59,7 @@ export default function About() {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute -bottom-8 -left-8 bg-secondary text-white p-8 rounded-2xl shadow-xl hidden md:block">
-                <p className="text-3xl font-bold mb-1">100%</p>
+                <p className="text-3xl font-bold mb-1">오</p>
                 <p className="text-sm font-medium">고객 중심 컨설팅 지향</p>
               </div>
             </div>

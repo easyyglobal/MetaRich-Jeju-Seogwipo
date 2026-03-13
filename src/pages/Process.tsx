@@ -58,7 +58,7 @@ export default function Process() {
       <section className="bg-white pt-[140px] md:pt-[180px] pb-[50px] md:pb-[100px] border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">상담 프로세스</h1>
-          <p className="text-gray-600">투명하고 체계적인 5단계 과정을 통해 최상의 솔루션을 약속합니다.</p>
+          <p className="text-gray-600">투명하고 체계적인 5단계 과정을 통해 최의 솔루션을 약속합니다.</p>
         </div>
       </section>
 

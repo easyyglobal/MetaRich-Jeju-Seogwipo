@@ -47,7 +47,7 @@ export default function Footer() {
             <ul className="space-y-4 text-slate-400 text-sm">
               <li><Link to="/protection/regulations" className="hover:text-white transition-colors">금융소비자보호규정</Link></li>
               <li><Link to="/protection/privacy" className="hover:text-white transition-colors">개인정보처리방침</Link></li>
-              <li><Link to="/protection/certificate" className="hover:text-white transition-colors">보험대리점등록증</Link></li>
+              {/*<li><Link to="/protection/certificate" className="hover:text-white transition-colors">보험대리점등록증</Link></li>*/}
             </ul>
           </div>
 
