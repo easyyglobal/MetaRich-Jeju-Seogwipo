@@ -176,7 +176,7 @@ export default function Home() {
               <div className="mt-12 md:mt-16">
                 <Link
                   to="/apply"
-                  className="flex md:inline-flex w-full md:w-auto justify-center items-center gap-3 gradient-secondary text-white px-10 py-5 rounded-2xl md:text-lg font-bold hover:shadow-[0_20px_40px_-10px_rgba(244,129,31,0.4)] hover:-translate-y-1 transition-all"
+                  className="flex md:inline-flex w-full md:w-auto justify-center items-center gap-3 gradient-secondary text-white px-2 md:px-10 py-5 rounded-2xl md:text-lg font-bold hover:shadow-[0_20px_40px_-10px_rgba(244,129,31,0.4)] hover:-translate-y-1 transition-all"
                 >
                   내 보험 정밀 분석 문의하기 <ArrowRight size={20} />
                 </Link>
