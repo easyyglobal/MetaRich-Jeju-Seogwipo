@@ -25,17 +25,58 @@ export default function Apply() {
 
   // 시간에 따라 자연스럽게 데이터가 쌓이고 밀려나는 리얼 타임라인 로직
   const recentApplications = React.useMemo(() => {
-    // 50개의 가짜 데이터를 Base64로 인코딩한 문자열입니다. (Ctrl+F 검색 방지)
-    const encodedData = "W3sibmFtZSI6IuC5gCjsiJgiLCJyZWdpb24iOiLshJzqtIDtj6zsi5wgZMOA7KCV7J21IiwidHlwZSI6Iuu0tOyepe22hOyEnSJ9LHsibmFtZSI6IuydtCjshIgiLCJyZWdpb24iOiLshJzqtIDtj6zsi5wg64Ko7JuQ7J21IiwidHlwZSI6IuyerOustOyEpOqzhCJ9LHsibmFtZSI6IuuwleyngCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDrhbjtmJXrj5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi7LWcKuywbyIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDshLHsgrDsnZUiLCJ0eXBlIjoi6riw7JeF67O07ZheIn0seyJuYW1lIjoi7KCVKu2drCIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDshJztmYTrj5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi6rCVKu2buCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDslYTnbbzrj5kiLCJ0eXBlIjoi6rWQ7Jyh7IS466+464KYIn0seyJuYW1lIjoi7JykKuyekCIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDspJHrrLjrj5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi7IahKuufrCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDsl7Drj5kiLCJ0eXBlIjoi7J6s66y07ISk6rOEIn0seyJuYW1lIjoi7J6EKuuyqCIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDtkZzshKDrqbQiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi7ZWcKuyjvCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDslqDsl7TsnbUiLCJ0eXBlIjoi6riw7JeF67O07ZheIn0seyJuYW1lIjoi7JikKuyEpyIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDslYjrrZTrqbQiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi7IScKuynhCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDsnbTrj4Trj5kiLCJ0eXBlIjoi7J6s66y07ISk6rOEIn0seyJuYW1lIjoi6raMKu2DnCIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDrj5ntmYTrj5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi7ZmpKuuvuCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDtmZTrtITrj5kiLCJ0eXBlIjoi7J6s66y07ISk6rOEIn0seyJuYW1lIjoi7JWIKuyEgSIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDtZqjrj4Trj5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi66WYKjtHhCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDsgrzslpHrj5kiLCJ0eXBlIjoi6riw7JeF67O07ZheIn0seyJuYW1lIjoi7KGwKuyVhCIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDsmIHssZzrj5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi67CxKjtYuCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDsmKTrnbzrj5kiLCJ0eXBlIjoi6rWQ7Jyh7IS466+464KYIn0seyJuYW1lIjoi6rmAKuydgCIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDsoJXrsKnrj5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi7J20KjtHhCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDsmbTrj4Trj5kiLCJ0eXBlIjoi7J6s66y07ISk6rOEIn0seyJuYW1lIjoi67CVKuuvuCIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDssZzsp4Drj5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi7LWcKuyEnCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDqsbTsnpXrj5kiLCJ0eXBlIjoi6riw7JeF67O07ZheIn0seyJuYW1lIjoi7KCVKuywoCIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDshqHshbDkr5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi6rCVKuynhCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDsnbTrj4Trj5kiLCJ0eXBlIjoi7J6s66y07ISk6rOEIn0seyJuYW1lIjoi7KGwKuycpCIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDspJHslZnrj5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi7JykKjtYuCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDsmqnri7Trj5kiLCJ0eXBlIjoi6riw7JeF67O07ZheIn0seyJuYW1lIjoi7J6lKu2drCIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDrjIDrpZzrj5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi7J6EKuyHhCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDsgrzrj4Trj5kiLCJ0eXBlIjoi6rWQ7Jyh7IS466+464KYIn0seyJuYW1lIjoi7ZWcKjsiJgiLCJyZWdpb24iOiLshJzqtIDtj6zsi5wg64Ko7JuQ7J21IiwidHlwZSI6Iuu0tOyepe22hOyEnSJ9LHsibmFtZSI6IuydtCjshIgiLCJyZWdpb24iOiLshJzqtIDtj6zsi5wg64Ko7JuQ7J21IiwidHlwZSI6IuyerOustOyEpOqzhCJ9LHsibmFtZSI6IuuwleyngCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDrhbjtmJXrj5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi7LWcKuywbyIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDshLHsgrDsnZUiLCJ0eXBlIjoi6riw7JeF67O07ZheIn0seyJuYW1lIjoi7KCVKu2drCIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDshJztmYTrj5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi6rCVKu2buCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDslYTnbbzrj5kiLCJ0eXBlIjoi6rWQ7Jyh7IS466+464KYIn0seyJuYW1lIjoi7JykKuyekCIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDspJHrrLjrj5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi7IahKuufrCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDsl7Drj5kiLCJ0eXBlIjoi7J6s66y07ISk6rOEIn0seyJuYW1lIjoi7J6EKuuyqCIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDtkZzshKDrqbQiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi7ZWcKuyjvCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDslqDsl7TsnbUiLCJ0eXBlIjoi6riw7JeF67O07ZheIn0seyJuYW1lIjoi7JikKuyEpyIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDslYjrrZTrqbQiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi7IScKuynhCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDsnbTrj4Trj5kiLCJ0eXBlIjoi7J6s66y07ISk6rOEIn0seyJuYW1lIjoi6raMKu2DnCIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDrj5ntmYTrj5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi7ZmpKuuvuCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDtmZTrtITrj5kiLCJ0eXBlIjoi7J6s66y07ISk6rOEIn0seyJuYW1lIjoi7JWIKuyEgSIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDtZqjrj4Trj5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi66WYKjtHhCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDsgrzslpHrj5kiLCJ0eXBlIjoi6riw7JeF67O07ZheIn0seyJuYW1lIjoi7KGwKuyVhCIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDsmIHssZzrj5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi67CxKjtYuCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDsmKTrnbzrj5kiLCJ0eXBlIjoi6rWQ7Jyh7IS466+464KYIn0seyJuYW1lIjoi6rmAKuydgCIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDsoJXrsKnrj5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi7J20KjtHhCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDsmbTrj4Trj5kiLCJ0eXBlIjoi7J6s66y07ISk6rOEIn0seyJuYW1lIjoi67CVKuuvuCIsInJlZ2lvbiI6IuyEnOq0gO2PrOyLnCDssZzsp4Drj5kiLCJ0eXBlIjoi67S07J6l7baE7ISdIn0seyJuYW1lIjoi7LWcKuyEnCIsInJlZ2lvbiI6IuCgnOyjvOyLnCDqsbTsnpXrj5kiLCJ0eXBlIjoi6riw7JeF67O07ZheIn1d";
-    
-    let pool: any[] = [];
-    try {
-      // Base64 디코딩 후 JSON 파싱
-      pool = JSON.parse(decodeURIComponent(escape(atob(encodedData))));
-    } catch (e) {
-      // 만약 디코딩에 실패하면 기본 데이터 1개만 노출
-      pool = [{ name: '김*수', region: '서귀포시 대정읍', type: '보장분석' }];
-    }
+    const pool = [
+      { name: '김*수', region: '서귀포시 대정읍', type: '보장분석' },
+      { name: '이*영', region: '서귀포시 남원읍', type: '재무설계' },
+      { name: '박*지', region: '제주시 노형동', type: '보장분석' },
+      { name: '최*우', region: '서귀포시 성산읍', type: '기업보험' },
+      { name: '정*희', region: '서귀포시 서홍동', type: '보장분석' },
+      { name: '강*훈', region: '제주시 아라동', type: '교육세미나' },
+      { name: '윤*자', region: '서귀포시 중문동', type: '보장분석' },
+      { name: '송*민', region: '제주시 연동', type: '재무설계' },
+      { name: '임*철', region: '서귀포시 표선면', type: '보장분석' },
+      { name: '한*주', region: '제주시 애월읍', type: '기업보험' },
+      { name: '오*성', region: '서귀포시 안덕면', type: '보장분석' },
+      { name: '서*진', region: '제주시 이도동', type: '재무설계' },
+      { name: '권*태', region: '서귀포시 동홍동', type: '보장분석' },
+      { name: '황*미', region: '제주시 화북동', type: '재무설계' },
+      { name: '안*석', region: '서귀포시 효돈동', type: '보장분석' },
+      { name: '류*현', region: '제주시 삼양동', type: '기업보험' },
+      { name: '조*아', region: '서귀포시 영천동', type: '보장분석' },
+      { name: '백*호', region: '제주시 오라동', type: '교육세미나' },
+      { name: '김*은', region: '서귀포시 정방동', type: '보장분석' },
+      { name: '이*현', region: '제주시 외도동', type: '재무설계' },
+      { name: '박*민', region: '서귀포시 천지동', type: '보장분석' },
+      { name: '최*서', region: '제주시 건입동', type: '기업보험' },
+      { name: '정*우', region: '서귀포시 송산동', type: '보장분석' },
+      { name: '강*진', region: '제주시 일도동', type: '재무설계' },
+      { name: '조*윤', region: '서귀포시 중앙동', type: '보장분석' },
+      { name: '윤*호', region: '제주시 용담동', type: '기업보험' },
+      { name: '장*희', region: '서귀포시 대륜동', type: '보장분석' },
+      { name: '임*영', region: '제주시 삼도동', type: '교육세미나' },
+      { name: '한*수', region: '서귀포시 남원읍', type: '보장분석' },
+      { name: '오*진', region: '제주시 구좌읍', type: '재무설계' },
+      { name: '서*우', region: '서귀포시 성산읍', type: '보장분석' },
+      { name: '신*아', region: '제주시 조천읍', type: '기업보험' },
+      { name: '권*민', region: '서귀포시 안덕면', type: '보장분석' },
+      { name: '황*준', region: '제주시 한림읍', type: '재무설계' },
+      { name: '안*희', region: '서귀포시 표선면', type: '보장분석' },
+      { name: '송*호', region: '제주시 애월읍', type: '교육세미나' },
+      { name: '류*진', region: '서귀포시 대정읍', type: '보장분석' },
+      { name: '고*수', region: '제주시 한경면', type: '재무설계' },
+      { name: '문*영', region: '서귀포시 서홍동', type: '보장분석' },
+      { name: '양*민', region: '제주시 우도면', type: '기업보험' },
+      { name: '손*우', region: '서귀포시 동홍동', type: '보장분석' },
+      { name: '배*진', region: '제주시 추자면', type: '재무설계' },
+      { name: '조*희', region: '서귀포시 대륜동', type: '보장분석' },
+      { name: '백*민', region: '제주시 노형동', type: '기업보험' },
+      { name: '허*우', region: '서귀포시 중문동', type: '보장분석' },
+      { name: '남*진', region: '제주시 연동', type: '교육세미나' },
+      { name: '심*희', region: '서귀포시 예래동', type: '보장분석' },
+      { name: '노*민', region: '제주시 아라동', type: '재무설계' },
+      { name: '하*우', region: '서귀포시 효돈동', type: '보장분석' },
+      { name: '곽*진', region: '제주시 이도동', type: '기업보험' }
+    ];
 
     const currentMinutes = Math.floor(Date.now() / (1000 * 60));
     const baseInterval = 41; // 평균 41분마다 1명씩 신청하는 것으로 시뮬레이션
