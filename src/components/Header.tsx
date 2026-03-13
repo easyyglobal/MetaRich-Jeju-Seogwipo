@@ -20,7 +20,7 @@ const specialProjects = [
 const protectionItems = [
   { name: '금융소비자보호규정', path: '/protection/regulations' },
   { name: '개인정보처리방침', path: '/protection/privacy' },
-  { name: '보험대리점등록증', path: '/protection/certificate' },
+ {/*  { name: '보험대리점등록증', path: '/protection/certificate' },*/}
 ];
 
 export default function Header() {

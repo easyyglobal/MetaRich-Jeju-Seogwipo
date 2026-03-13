@@ -120,6 +120,20 @@ export default function Apply() {
     return selected;
   }, []); // 컴포넌트 마운트 시 1회 계산
 
+  // 오늘 총 신청자 수 계산 로직 (시간이 지날수록 자연스럽게 증가)
+  const todayApplicationCount = React.useMemo(() => {
+    const now = new Date();
+    // 오늘 자정부터 지금까지 흐른 분(minute) 계산
+    const minutesSinceMidnight = now.getHours() * 60 + now.getMinutes();
+    
+    // 날짜를 시드로 사용하여 매일 약간의 변동성(노이즈)을 줌
+    const daySeed = now.getDate(); 
+    const noise = (daySeed * 7) % 5; // 0~4 사이의 추가 변동값
+    
+    // 평균 41분마다 1명씩 신청한다고 가정 + 기본 2명 + 노이즈
+    return Math.floor(minutesSinceMidnight / 41) + 2 + noise;
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.agree) {
@@ -353,7 +367,7 @@ export default function Apply() {
                 ))}
               </div>
               <div className="mt-8 pt-6 border-t border-slate-50 text-center">
-                <p className="text-xs text-slate-400">오늘 총 <span className="text-primary font-bold">24명</span>이 상담을 신청했습니다.</p>
+                <p className="text-xs text-slate-400">오늘 총 <span className="text-primary font-bold">{todayApplicationCount}명</span>이 상담을 신청했습니다.</p>
               </div>
             </div>
 
@@ -370,7 +384,7 @@ export default function Apply() {
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-5 h-5 rounded-full bg-blue-50 text-primary flex items-center justify-center shrink-0 mt-0.5">3</div>
-                  <span>고객님이 원하시는 시간에 상담이 진행됩니다.</span>
+                  <span>조율 완된 시간에 상담이 진행됩니다.</span>
                 </li>
               </ul>
             </div>

@@ -23,12 +23,12 @@ export default function Footer() {
               보험을 넘어 당신의 인생을 함께 설계합니다.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.instagram.com/metarich_jeju?igsh=MXZkeWp1MThxZHc5OA==" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="https://www.instagram.com/metarich_jeju?igsh=MXZkeWp1MThxZHc5OA==" target="_blank" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors">
+              {/*<a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors">
                 <Facebook size={20} />
-              </a>
+              </a>*/}
             </div>
           </div>
 
@@ -56,16 +56,16 @@ export default function Footer() {
             <ul className="space-y-4 text-slate-400 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-primary shrink-0" />
-                <span>제주특별자치도 서귀포시 중앙로 (상세주소는 지점 정보에 따름)</span>
+                <span>제주 서귀포시 중산간서로157번길 68 1층</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-primary shrink-0" />
                 <span>064-XXX-XXXX</span>
               </li>
-              <li className="flex items-center gap-3">
+              {/* <li className="flex items-center gap-3">
                 <Mail size={18} className="text-primary shrink-0" />
                 <span>contact@metarich-jeju.com</span>
-              </li>
+              </li>*/}
             </ul>
           </div>
         </div>
@@ -75,18 +75,18 @@ export default function Footer() {
           <div className="bg-slate-800/50 rounded-2xl p-6 md:p-8 border border-slate-700/50">
             <div className="flex items-center gap-2 mb-4 text-slate-200">
               <ShieldCheck size={18} className="text-secondary" />
-              <span className="font-bold text-sm">보험대리점 업무광고 필수 고지사항</span>
+              <span className="font-bold text-sm">보험대리점 필수 고지사항</span>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-[11px] md:text-xs text-slate-400 leading-relaxed">
               <div className="space-y-2">
-                <p>• 보험대리점명: 메타리치 (대리점 등록번호: 제2024030000호)</p>
+                <p>• 보험대리점명: 주식회사 메타리치 (대리점 등록번호: 제2023070016호)</p>
                 <p>• 금융소비자는 해당 상품에 대하여 충분한 설명을 받을 권리가 있으며, 그 설명을 이해한 후 거래하시기 바랍니다.</p>
                 <p>• 보험계약 체결 전 상품설명서 및 약관을 반드시 읽어보시기 바랍니다.</p>
               </div>
               <div className="space-y-2">
                 <p>• 기존 보험계약을 해지하고 새로운 보험계약을 체결하는 경우 보험인수가 거절되거나 보험료가 인상될 수 있으며, 보장내용이 달라질 수 있습니다.</p>
-                <p>• 본 광고는 광고심의기준을 준수하였으며, 유효기간은 심의일로부터 1년입니다.</p>
-                <p className="text-slate-500 mt-2">준법감시인 심의필 제2026-0000호 (2026.03.01 ~ 2027.02.28)</p>
+               {/*  <p>• 본 광고는 광고심의기준을 준수하였으며, 유효기간은 심의일로부터 1년입니다.</p>
+                <p className="text-slate-500 mt-2">준법감시인 심의필 제2026-0000호 (2026.03.01 ~ 2027.02.28)</p> */}
               </div>
             </div>
           </div>
