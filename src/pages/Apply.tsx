@@ -23,7 +23,7 @@ export default function Apply() {
     }
   }, [success]);
 
-  // 50개의 넉넉한 가짜 데이터 풀 및 랜덤 시간 생성 로직
+  // 시간에 따라 자연스럽게 데이터가 쌓이고 밀려나는 리얼 타임라인 로직
   const recentApplications = React.useMemo(() => {
     const pool = [
       { name: '김*수', region: '서귀포시 대정읍', type: '보장분석' },
@@ -78,32 +78,47 @@ export default function Apply() {
       { name: '곽*진', region: '제주시 이도동', type: '기업보험' }
     ];
 
-    // 시간대별 랜덤 범위를 지정하여 항상 최근 순서대로 보이게 설정
-    const timeRanges = [
-      { min: 1, max: 5, unit: '분 전' },
-      { min: 6, max: 15, unit: '분 전' },
-      { min: 16, max: 35, unit: '분 전' },
-      { min: 36, max: 59, unit: '분 전' },
-      { min: 1, max: 2, unit: '시간 전' },
-      { min: 3, max: 5, unit: '시간 전' },
-      { min: 6, max: 12, unit: '시간 전' }
-    ];
+    const currentMinutes = Math.floor(Date.now() / (1000 * 60));
+    const baseInterval = 41; // 평균 41분마다 1명씩 신청하는 것으로 시뮬레이션
 
-    const getRandomInt = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
+    // 현재 시간을 기준으로 이미 발생한 가장 최근의 '가상 신청 이벤트 ID'를 찾음
+    let latestId = Math.floor(currentMinutes / baseInterval) + 1;
+    while (true) {
+      // 약간의 불규칙성(노이즈)을 주어 기계적이지 않게 만듦 (최대 28분 오차)
+      const eventTime = latestId * baseInterval - ((latestId * 17) % 29);
+      if (eventTime <= currentMinutes) break;
+      latestId--;
+    }
 
-    // 1. 50개의 데이터 풀을 무작위로 섞음
-    const shuffledPool = [...pool].sort(() => 0.5 - Math.random());
-    
-    // 2. 상위 7개를 뽑아서 각각 리얼한 랜덤 시간을 부여
-    return shuffledPool.slice(0, 7).map((item, index) => {
-      const range = timeRanges[index];
-      const randomTime = getRandomInt(range.min, range.max);
-      return {
+    const selected = [];
+    // 가장 최근 이벤트부터 과거로 7개를 추적하여 리스트 생성
+    for (let i = 0; i < 7; i++) {
+      const id = latestId - i;
+      const item = pool[Math.abs(id) % pool.length];
+      const eventTime = id * baseInterval - ((id * 17) % 29);
+      const minutesAgo = currentMinutes - eventTime;
+      
+      let timeString = '';
+      if (minutesAgo === 0) {
+        timeString = '방금 전';
+      } else if (minutesAgo < 60) {
+        timeString = `${minutesAgo}분 전`;
+      } else if (minutesAgo < 24 * 60) {
+        const hours = Math.floor(minutesAgo / 60);
+        timeString = `${hours}시간 전`;
+      } else {
+        const days = Math.floor(minutesAgo / (24 * 60));
+        timeString = `${days}일 전`;
+      }
+
+      selected.push({
         ...item,
-        time: `${randomTime}${range.unit}`
-      };
-    });
-  }, []); // 빈 배열을 넣어 페이지에 들어올 때마다(새로고침 시) 새롭게 계산됨
+        time: timeString
+      });
+    }
+    
+    return selected;
+  }, []); // 컴포넌트 마운트 시 1회 계산
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
