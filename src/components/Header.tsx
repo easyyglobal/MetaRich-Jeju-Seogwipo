@@ -275,7 +275,7 @@ export default function Header() {
                   onClick={() => setIsOpen(false)}
                   className="block w-full text-center gradient-primary text-white py-5 rounded-2xl text-lg font-bold shadow-lg"
                 >
-                  정밀 보장분석 신청하기
+                  정밀 분석 신청하기
                 </Link>
               </div>
             </div>
