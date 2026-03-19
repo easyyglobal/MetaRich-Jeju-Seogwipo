@@ -21,6 +21,10 @@ export default function Apply() {
   React.useEffect(() => {
     if (success) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+       // 메타 픽셀 '등록 완료(CompleteRegistration)' 전환 이벤트 전송
+      if (typeof (window as any).fbq !== 'undefined') {
+        (window as any).fbq('track', 'CompleteRegistration'); 
+      }
     }
   }, [success]);
 
